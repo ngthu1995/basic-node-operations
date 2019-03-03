@@ -1,0 +1,96 @@
+1. sort command.js : the command will sort the file alphabetically:
+Result: 
+break;
+      break;
+      commandLibrary.cat(userInputArray.slice(1));
+      commandLibrary.echo(userInputArray.slice(1).join(" "));
+      done(data);
+      if (err) throw err;
+    });
+    case "cat":
+    case "echo":
+    const fileName = fullPath[0];
+    done(userInput);
+    fs.readFile(fileName, (err, data) => {
+  }
+  }
+  },
+  cat: function(fullPath) {
+  const command = userInputArray[0];
+  const userInputArray = userInput.split(" ");
+  echo: function(userInput) {
+  process.stdout.write("\nprompt > ");
+  process.stdout.write(output);
+  switch (command) {
+
+}
+};
+const commandLibrary = {
+const fs = require("fs");
+function done(output) {
+function evaluateCmd(userInput) {
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+
+wc command.js : the command will print out the number of lines, words and characters in command.js respectively.
+Result: 
+ 43  113 1073 command.js
+
+
+uniq command.js : the command will look through the file and return the different lines. 
+Result: 
+const fs = require("fs");
+
+function done(output) {
+  process.stdout.write(output);
+  process.stdout.write("\nprompt > ");
+}
+
+function evaluateCmd(userInput) {
+  //parses the user input to understand which command was typed
+  const userInputArray = userInput.split(" ");
+  const command = userInputArray[0];
+
+  switch (command) {
+    case "echo":
+      //we will add the functionality of echo next within the object commandLibrary
+      commandLibrary.echo(userInputArray.slice(1).join(" "));
+      break;
+
+    case "cat":
+      commandLibrary.cat(userInputArray.slice(1));
+      break;
+  }
+}
+
+const commandLibrary = {
+  echo: function(userInput) {
+    done(userInput);
+  },
+
+  cat: function(fullPath) {
+    const fileName = fullPath[0];
+    fs.readFile(fileName, (err, data) => {
+      if (err) throw err;
+      done(data);
+    });
+  }
+};
+
+module.exports.commandLibrary = commandLibrary;
+module.exports.evaluateCmd = evaluateCmd;
+
+6. Given a string, reverse the order of characters in each word within a sentence while maintaining the original word order and whitespace and return the string.
+
+function reverseString (string) {
+  let newArray = string.split(" ");//into array
+  let newList = []
+  newArray.forEach( (item) => {
+    let newItem = item.split("").reverse().join("");
+    newList.push(newItem);
+  })
+  return newList.join(" ");
+}
+
+reverseString("Hi there")
